@@ -55,10 +55,6 @@ def runtests():
         warnings.filterwarnings(
             "default", category=DeprecationWarning, module=only_wagtail_headless_preview
         )
-    elif args.deprecation == "none":
-        # Deprecation warnings are ignored by default
-        pass
-
     argv = [sys.argv[0]] + rest
 
     try:
