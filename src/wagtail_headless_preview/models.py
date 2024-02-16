@@ -58,7 +58,7 @@ class HeadlessPreviewMixin:
 
     @classmethod
     def get_content_type_str(cls):
-        return cls._meta.app_label + "." + cls.__name__.lower()
+        return f"{cls._meta.app_label}.{cls.__name__.lower()}"
 
     @classmethod
     def get_page_from_preview_token(cls, token):
@@ -120,13 +120,11 @@ class HeadlessPreviewMixin:
         if headless_preview_settings.REDIRECT_ON_PREVIEW:
             return redirect(preview_url)
 
-        response = render(
+        return render(
             request,
             "wagtail_headless_preview/preview.html",
             {"preview_url": preview_url},
         )
-
-        return response
 
 
 class HeadlessServeMixin:
