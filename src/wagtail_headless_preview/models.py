@@ -41,7 +41,7 @@ class PagePreview(models.Model):
 
     @classmethod
     def garbage_collect(cls):
-        yesterday = datetime.datetime.now() - datetime.timedelta(hours=24)
+        yesterday = datetime.date.today() - datetime.timedelta(days=1)
         cls.objects.filter(created_at__lt=yesterday).delete()
 
 
