@@ -7,9 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Add Django 5.1 and 5.2, Wagtail 7.0 and 7.2 to the test matrix
-- Drop support for Python < 3.10
-- Drop support for Wagtail < 6.3
+## Added
+
+- Add support for Python 3.14, Django 5.2+ and Wagtail 7.0+
+
+## Removed
+
+- Drop support for Python < 3.10, Django < 5.2, Wagtail < 7.0
 
 ## [0.8] - 2024-02-23
 
