@@ -299,7 +299,7 @@ CORS_URLS_REGEX = r"^/api/v2/"
 
 and follow the rest of the [setup instructions for django-cors-headers](https://github.com/ottoyiu/django-cors-headers#setup).
 
-* Start up your site as normal: `python manage.py runserver 0:8000`
+* Start up your site as normal: `python manage.py runserver 127.0.0.1:8000`
 * Serve the front-end `client/index.html` at `http://localhost:8020/`
    - this can be done by running `python3 -m http.server 8020` from inside the client directory
 * From the wagtail admin interface, edit (or create) and preview a page that uses `HeadlessPreviewMixin`
@@ -334,8 +334,8 @@ Now you can run tests as shown below:
 tox -p
 ```
 
-or, you can run them for a specific environment `tox -e python3.13-django5.2-wagtail7.4` or specific test
-`tox -e python3.13-django5.2-wagtail7.4 -- wagtail_headless_preview.tests.test_frontend.TestFrontendViews.test_redirect_on_preview`
+or, you can run them for a specific environment `tox -e python3.14-django5.2-wagtail7.4` or specific test
+`tox -e python3.14-django5.2-wagtail7.4 -- wagtail_headless_preview.tests.test_frontend.TestFrontendViews.test_redirect_on_preview`
 
 ## Credits
 
